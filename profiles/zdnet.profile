@@ -36,16 +36,16 @@
       }
     },
     "content": {
-      "containerClass": "storyBody",
-      "element": "p;h3;blockquote;img",
-      "class": "",
+      "containerClass": "",
+      "element": "div",
+      "class": "storyBody",
       "headerImage": {
-        "containerClass": "shortcode-image",
+        "containerClass": "videoSlide",
         "element": "img",
         "class": ""
       },
-      "remove": "",
-      "recursive": "False"
+      "remove": "div,relatedContent;section,leadgenads;div,shortcode",
+      "recursive": "True"
     }
   }
 }
