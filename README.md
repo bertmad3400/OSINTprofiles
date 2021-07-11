@@ -1,8 +1,8 @@
-#OSINTer profiles
+# OSINTer profiles
 
 ![OSINTer](https://github.com/Combitech-DK/OSINTer/blob/master/logo.png)
 
-##What is a profile?
+## What is a profile?
 OSINT'er is a project aiming at building an generic webscraping engine, for
 collecting and curating information and articles from a whole range of news
 sites by using a couple of rules on how and where to find the relevant
@@ -34,7 +34,7 @@ find the 10 newest articles, and while it does not offer the same reliability as
 the RSS feeds, it does allow for gathering of articles from basically any
 news site.
 
-##How can you create a profile?
+## How can you create a profile?
 So lets say you maybe have found a website you want to include in the feed, it
 is certainly possible to create your own profile and then either submit a pull
 request to the OSINTprofiles repo or host the feed yourself.
@@ -48,7 +48,7 @@ Now you simply have to fill in those details in the template corresponding to if
 the website has a RSS feed or not along with navigating to an article to find
 the details described in the next section.
 
-##The contents of a profile
+## The contents of a profile
 Now, the first few details will be descriped in the template and are simple
 things like the url to the news site or the name of it, but as you continue
 filling it out, a lot of details will be different kinds of HTML tags and their
@@ -59,7 +59,7 @@ news site in question, and then use the "inspect" tool build into most modern
 browsers. This will allow you to pinpoint excactly what type of HTML element and
 what class a part of the page is.
 
-####The source section
+#### The source section
 If you have found a news site with a functioning RSS feed, this whole section
 will already be described in the "ScrapingTemplate", but if you have found one
 where scraping is necessary to collect articles, you will need the following
@@ -80,7 +80,7 @@ descriptions:
 	  withing each container. If it doesn't exist, then it should just be left
 	  empty.
 
-####The scraping section
+#### The scraping section
 The prior section was mostly about where to find the articles to scrape, but in
 contrast to that, this section is about where on a given article page to find
 the relevant details. A concept you will encounter a lot in this section is the
@@ -120,10 +120,10 @@ the link.
 	  elements comprising the body text.
 
 	  Enabling this can also sometimes have an unwanted side effect. If
-	  describing multiple elements (like both <p> and <img>) and enabling this
+	  describing multiple elements (like both \<p\> and \<img\>) and enabling this
 	  option, if the script the encounters a nested element where both the inner
-	  and outer element is described in "element" (like an <img> tag withing a
-	  <p> tag), it will duplicate the inner tag, so therefore it's advisiable to
+	  and outer element is described in "element" (like an \<img\> tag withing a
+	  \<p\> tag), it will duplicate the inner tag, so therefore it's advisiable to
 	  set this to false if not needed.
 	- **containerClass**: This is the class for the container containing the
 	  body text. If it doesn't exist, then it should just be left empty.
@@ -131,7 +131,7 @@ the link.
 	  is set to true, it should just be the element of the container for the
 	  body text, but if recursive is instead be set to false, it can instead be
 	  a list of HTML elements comprising the body text seperated by a semicolon
-	  (so for example "p;img;span")
+	  (so for example "*p;img;span*")
 	- **clas**: This is the class for all of the elements described in
 	  "element". If it doesn't exist, or the elements doesn't all have a class
 	  in common, then it should just be left empty.
@@ -148,18 +148,18 @@ the link.
 	  specifying the unwanted elements along with their class in a list
 	  seperated by commas and semicolons like this:
 
-	  tag,class;tag,class;tag,class;...
+	  *tag,class;tag,class;tag,class;...*
 
 	  If the tag doesn't have a class, that part can simply be left out, but the
-	  comma should stay, so lets say we want to remove a <p> tag of the class
-	  "text" along with all <img> tags without a class, that would look like
+	  comma should stay, so lets say we want to remove a \<p\> tag of the class
+	  "text" along with all \<img\> tags without a class, that would look like
 	  this:
 
-	  p,text;img,;
+	  *p,text;img,;*
 
 	  It is also possible to specify multiple of the same HTML tag with
 	  different classes like this:
 
-	  p,text;p,information;img,;
+	  *p,text;p,information;img,;*
 
 
