@@ -31,7 +31,7 @@
       "element": "p;h2;h3;img;blockquote;a;ul;li;ol;div;figure",
       "class": "",
       "headerImage": "",
-      "remove": "cnx,cnx-main-container;cnx-in-desktop,;cnx-ps,;cnx-main-container-flex,",
+      "remove": "cnx,cnx-main-container;cnx-in-desktop,;cnx-ps,;cnx-main-container-flex,;div,cz-related-article-wrapp",
       "recursive": "False"
     }
   }
