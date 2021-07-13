@@ -3,6 +3,7 @@
     "name": "Bleeping Computer",
     "profileName": "bleepingcomputer",
     "address": "https://www.bleepingcomputer.com/",
+    "imageURL": "https://www.bleepstatic.com/logo/bleepingcomputer-logo.png",
     "retrivalMethod": "rss",
     "newsPath": "https://www.bleepingcomputer.com/feed/"
   },

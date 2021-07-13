@@ -3,6 +3,7 @@
     "name": "ZDNet",
     "profileName": "zdnet",
     "address": "https://www.zdnet.com/",
+    "imageURL": "https://www.zdnet.com/a/fly/bundles/zdnetcore/images/logos/zdnet-logo-large.png",
     "retrivalMethod": "scraping",
     "newsPath": "https://www.zdnet.com/topic/security/",
     "scrapingTargets": {
