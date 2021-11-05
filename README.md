@@ -92,21 +92,6 @@ the link.
 
 - **type**: This is variable that has been left here for future development, for
   know simply let it be the default value (which is "no-action")
-- **details**: The section descriping where to find details that's not a part of
-  the main text body
-	- **title, subtitle, date, author**: These are used for finding details like
-	  the title and the others descriped. They all use the same template for
-	  finding the details like so:
-		- **containerClass**: This is the class for the container containing the
-		  relevant information. If doesn't exist, then it should just be left
-		  empty.
-		- **element**: This is the HTML element containing the relevant
-		  information.
-		- **class**: This is the class of the HTML element containing the
-		  relevant information. If it doesn't exist, then it should just be left
-		  empty.
-	  As always, these details should be enough to uniquely identify the needed
-	  information.
 - **content**: The section describing how to scrape the main text body. This
   section is a little more complicated than the others, as it does not only
   descripe where to find the information, but also how to extract it.
@@ -135,11 +120,6 @@ the link.
 	- **clas**: This is the class for all of the elements described in
 	  "element". If it doesn't exist, or the elements doesn't all have a class
 	  in common, then it should just be left empty.
-	- **headerImage**: Some articles have an image just under the title that
-	  isn't programmatically a part of the body text. If that's the case, fill
-	  in "containerClass", "element" and "class" in the same way as the details
-	  in the "details" section (like author or date), otherwise just leave it
-	  empty.
 	- **remove**: Sometimes it is impossible to define some rules that include
 	  all the needed elements from the body text, but at the same time exclude
 	  all the unwanted elements. Therefore it is advised to make some rules that

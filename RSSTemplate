@@ -8,29 +8,10 @@
   },
   "scraping": {
     "type": "no-action",
-    "details": {
-      "title": {
-        "containerClass": "",
-        "element": "",
-        "class": ""
-      },
-      "subtitle": "",
-      "date": {
-        "containerClass": "",
-        "element": "",
-        "class": ""
-      },
-      "author": {
-        "containerClass": "",
-        "element": "",
-        "class": ""
-      }
-    },
     "content": {
       "containerClass": "",
       "element": "",
       "class": "",
-      "headerImage": "",
       "remove": "",
       "recursive": ""
     }
