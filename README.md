@@ -1,6 +1,6 @@
 # OSINTer profiles
 
-![OSINTer](https://github.com/Combitech-DK/OSINTer/blob/master/logo.png)
+![OSINTer](https://raw.githubusercontent.com/bertmad3400/OSINTer/master/logo.png)
 
 ## What is a profile?
 OSINT'er is a project aiming at building an generic webscraping engine, for
