@@ -15,6 +15,7 @@
   "scraping": {
     "type": "no-action",
     "content": {
+	  "containerID": "",
       "containerClass": "",
       "element": "div",
       "class": "entry-content",

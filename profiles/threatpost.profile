@@ -10,6 +10,7 @@
   "scraping": {
     "type": "no-action",
     "content": {
+	  "containerID": "",
       "containerClass": "c-article__content",
       "element": "p;h2;img;blockquote",
       "class": "",
