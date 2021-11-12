@@ -7,20 +7,16 @@
     "retrivalMethod": "scraping",
     "newsPath": "https://therecord.media/all-news/",
     "scrapingTargets": {
-      "linkClass": "news__thumb",
-      "element": "div",
-      "class": "news__new news__new--featured"
+	  "containerList": "div.news",
+	  "linkContainers": "div.news__new--featured",
+	  "links": "a.news__thumb[href]"
     }
   },
   "scraping": {
     "type": "no-action",
     "content": {
-	  "containerID": "",
-      "containerClass": "",
-      "element": "div",
-      "class": "col-right",
-      "remove": "div,share-icons-bottom;div,tags;div,bottom-author;h1,single-page-title",
-      "recursive": "True"
+      "container": "div.col-right",
+      "remove": "div.share-icons-bottom;div.tags;div.bottom-author;h1.single-page-title"
     }
   }
 }

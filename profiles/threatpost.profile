@@ -10,12 +10,8 @@
   "scraping": {
     "type": "no-action",
     "content": {
-	  "containerID": "",
-      "containerClass": "c-article__content",
-      "element": "p;h2;img;blockquote",
-      "class": "",
-      "remove": "img,wp-image-141989",
-      "recursive": "False"
+      "container": ".c-article__content",
+      "remove": "img.wp-image-141989;footer;[class^='wp-caption']"
     }
   }
 }

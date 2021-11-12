@@ -7,20 +7,16 @@
     "retrivalMethod": "scraping",
     "newsPath": "https://thedfirreport.com/",
     "scrapingTargets": {
-      "linkClass": "",
-      "element": "h2",
-      "class": "entry-title"
+	  "containerList": "div.posts-holder",
+      "linkContainers": "h2.entry-title",
+	  "links": "a[href]"
     }
   },
   "scraping": {
     "type": "no-action",
     "content": {
-	  "containerID": "",
-      "containerClass": "",
-      "element": "div",
-      "class": "entry-content",
-      "remove": "div,sharedaddy;div,jp-relatedposts;noscript,",
-      "recursive": "True"
+      "container": "div.entry-content",
+      "remove": "div.sharedaddy;div.jp-relatedposts;noscript"
     }
   }
 }

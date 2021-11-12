@@ -7,20 +7,16 @@
     "retrivalMethod": "scraping",
     "newsPath": "https://www.zdnet.com/topic/security/",
     "scrapingTargets": {
-      "linkClass": "",
-      "element": "article",
-      "class": "item"
+	  "containerList": "div.river",
+      "linkContainers": "article.item",
+	  "links": "a[href]"
     }
   },
   "scraping": {
     "type": "no-action",
     "content": {
-	  "containerID": "",
-      "containerClass": "",
-      "element": "div",
-      "class": "storyBody",
-      "remove": "div,relatedContent;section,leadgenads;div,shortcode",
-      "recursive": "True"
+      "container": "div.storyBody",
+      "remove": "div.relatedContent;section.leadgenads;div.shortcode"
     }
   }
 }
