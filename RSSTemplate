@@ -1,19 +1,17 @@
 {
   "source": {
-    "name": [name of newssite],
-    "profileName": [name of this file without extension],
-    "address": [the root address for the website],
+    "name": "[name of newssite]",
+    "profileName": "[name of this file without extension]",
+    "address": "[the root address for the website]",
+    "imageURL": "[url to icon image]",
     "retrivalMethod": "rss",
-    "newsPath": [the url for the rss feed for the website]
+    "newsPath": "[the url for the rss feed for the website]"
   },
   "scraping": {
     "type": "no-action",
     "content": {
-      "containerClass": "",
-      "element": "",
-      "class": "",
-      "remove": "",
-      "recursive": ""
+      "container": "",
+      "remove": ""
     }
   }
 }

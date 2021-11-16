@@ -1,24 +1,22 @@
 {
   "source": {
-    "name": [name of newssite],
-    "profileName": [name of this file without extension],
-    "address": [the root address for the website],
+    "name": "[name of newssite]",
+    "profileName": "[name of this file without extension]",
+    "address": "[the root address for the website]",
+    "imageURL": "[url to icon image]",
     "retrivalMethod": "scraping",
-    "newsPath": [url to the front page overview to scrape],
+    "newsPath": "[url to the front page overview to scrape]",
     "scrapingTargets": {
-      "linkClass": "",
-      "element": "",
-      "class": ""
+      "containerList": "",
+      "linkContainers": "",
+      "links": ""
     }
   },
   "scraping": {
     "type": "no-action",
     "content": {
-      "containerClass": "",
-      "element": "",
-      "class": "",
-      "remove": "",
-      "recursive": ""
+      "container": "",
+      "remove": ""
     }
   }
 }
