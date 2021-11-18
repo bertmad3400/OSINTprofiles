@@ -13,7 +13,7 @@
 	}
   },
   "scraping": {
-    "type": "no-action",
+    "type": "fix-links",
     "content": {
 	  "container": "div#penci-post-entry-inner",
       "remove": "div.post-tags"
