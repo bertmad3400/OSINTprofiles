@@ -13,7 +13,7 @@
     }
   },
   "scraping": {
-    "type": "no-action",
+    "type": "JS:fixTheRecordLinks",
     "content": {
       "container": "div.col-right",
       "remove": "div.share-icons-bottom;div.tags;div.bottom-author;h1.single-page-title"
