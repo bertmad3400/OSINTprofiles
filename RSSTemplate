@@ -8,7 +8,7 @@
     "newsPath": "[the url for the rss feed for the website]"
   },
   "scraping": {
-    "type": "no-action",
+    "type": "",
     "content": {
       "container": "",
       "remove": ""
