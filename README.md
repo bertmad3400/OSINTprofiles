@@ -59,6 +59,13 @@ news site in question, and then use the "inspect" tool build into most modern
 browsers. This will allow you to pinpoint excactly what type of HTML element and
 what class a part of the page is.
 
+Profiles in OSINTprofiles also use a technology known as CSS selectors. These
+are expression taken from CSS which are able to pinpoint specific elements in
+the DOM and they are a key technology in OSINTprofiles. This means that if
+you're not familiar with them, you should go and read [the relevant
+documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
+before attempting to create profiles yourself.
+
 #### The source section
 If you have found a news site with a functioning RSS feed, this whole section
 will already be described in the "ScrapingTemplate", but if you have found one
@@ -67,18 +74,20 @@ descriptions:
 
 - **ScrapingTargets**: This section describes which parts of the page to look
   for links for articles in
-	- **linkClass**: On some sites the links to the different articles have a
-	  class that only referes to those links (like for example "articles" or
-	  "stories"). If that is the case on your news site, and that class doesn't
-	  seem to be used for anything else, go ahead and fill in the name of that
-	  class, otherwise just leave the option empty ("")
-	- **element**: This value should match the HTML element surrounding the link
-	  (oftentimes the link is within a div or span or some other element)
-	- **class**: This should be the class of the element just descriped before
-	  surrounding the link. It's important that this class is unique to those
-	  containers containing links to other articles, and there's only one link
-	  withing each container. If it doesn't exist, then it should just be left
-	  empty.
+	- **containerList**: This is a CSS selector for the container element, which
+	  contains every single relevant link.
+	- **linkContainers**: This is a CSS selector for a container element which
+	  contains a single link to an article.
+	- **links**: This is a CSS selector for the relevant links. Often this is
+	  simply "a[href]" when used in conjunction with either containerList or
+	  linkContainers (or both).
+
+If one if these attributes isn't relevant/present on the website you're trying
+to build a profile for, simply leave them blank (some websites for example
+doesn't have a container element around each single link, in which case
+linkContainers should be left blank). Do keep in mind though that the links
+attribute can't be left blank (so if in doubt, simply use the selector
+"a[href]".
 
 #### The scraping section
 The prior section was mostly about where to find the articles to scrape, but in
@@ -90,56 +99,24 @@ looking for a link, if you then locate a container (could be a div, a span or
 something else) containing that link, and no other links, it's easy to extract
 the link.
 
-- **type**: This is variable that has been left here for future development, for
-  know simply let it be the default value (which is "no-action")
-- **content**: The section describing how to scrape the main text body. This
-  section is a little more complicated than the others, as it does not only
-  descripe where to find the information, but also how to extract it.
-	- **recursive**: This option determines whether the script should scrape
-	  recursivly or not. If doing recursive scraping it will scrape all the
-	  elements elements described in "containerClass" and "element" along with
-	  the elements inside of these. This can simplify the details a lot, as you
-	  then only have to descripe the container of the body text, but if this
-	  container contians more than just the wanted text (like adds or videos)
-	  and can sometimes be the only option to disable this and descripe all the
-	  elements comprising the body text.
+- **type**: This is an attribute that currently has two options; 1. specifying
+  "no-action", which will have no effect on the scraping and 2. specifying JS
+  injections for the scraping proccess (for an explanation of what JS injections
+  are, check phase 2 in the Technical details section of the [OSINTer
+  README](https://github.com/bertmad3400/OSINTer/blob/testing/README.md)) To
+  specify JS injections, specify a semicolon sepearated list of JS injections in
+  this format:
 
-	  Enabling this can also sometimes have an unwanted side effect. If
-	  describing multiple elements (like both \<p\> and \<img\>) and enabling this
-	  option, if the script the encounters a nested element where both the inner
-	  and outer element is described in "element" (like an \<img\> tag withing a
-	  \<p\> tag), it will duplicate the inner tag, so therefore it's advisiable to
-	  set this to false if not needed.
-	- **containerClass**: This is the class for the container containing the
-	  body text. If it doesn't exist, then it should just be left empty.
-	- **element**: These are the elements comprising the body text. If recursive
-	  is set to true, it should just be the element of the container for the
-	  body text, but if recursive is instead be set to false, it can instead be
-	  a list of HTML elements comprising the body text seperated by a semicolon
-	  (so for example "*p;img;span*")
-	- **clas**: This is the class for all of the elements described in
-	  "element". If it doesn't exist, or the elements doesn't all have a class
-	  in common, then it should just be left empty.
-	- **remove**: Sometimes it is impossible to define some rules that include
-	  all the needed elements from the body text, but at the same time exclude
-	  all the unwanted elements. Therefore it is advised to make some rules that
-	  include all the wanted elements (and even those that aren't wanted), and
-	  then specify the unwanted elements in this field. That is done by
-	  specifying the unwanted elements along with their class in a list
-	  seperated by commas and semicolons like this:
+  ```JS:[injectionFileName];JS:[injectionFileName];...```
 
-	  *tag,class;tag,class;tag,class;...*
-
-	  If the tag doesn't have a class, that part can simply be left out, but the
-	  comma should stay, so lets say we want to remove a \<p\> tag of the class
-	  "text" along with all \<img\> tags without a class, that would look like
-	  this:
-
-	  *p,text;img,;*
-
-	  It is also possible to specify multiple of the same HTML tag with
-	  different classes like this:
-
-	  *p,text;p,information;img,;*
-
+  Here, the injectionFileName is the name of the js file in the
+  OSINTbackend/OSINTJSInjections directory containing the JS injection,
+  excluding the .js extension.
+- **content**: The section describing how to scrape the main text body:
+	- **container**: This is a CSS selector for the container containing the
+	  main text of the article.
+	- **remove**: This is a semicolon-seperated list of CSS selectors for
+	  elements within the **container** that you want to remove before saving
+	  the article (so this could be divs containing ads or a PSA that has
+	  nothing to do with the article).
 
