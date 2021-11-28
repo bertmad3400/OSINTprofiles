@@ -2,6 +2,17 @@
 
 ![OSINTer](https://raw.githubusercontent.com/bertmad3400/OSINTer/master/logo.png)
 
+## Welcome to OSINTer This repo is a part of a larger project called
+![OSINTer](https://github.com/bertmad3400/OSINTer). For more information on the
+project as a shole, you can find OSINTer at
+![https://github.com/bertmad3400/OSINTer](https://github.com/bertmad3400/OSINTer).
+
+## What is OSINTprofiles?  OSINTprofiles is responsible for hosting the
+information for scraping news sites in a generic and standardized way, to
+enable OSINTbackend to function as a generic scraping engine for these sites,
+and thereby managing the wast differences in modern websites in a managable way
+that doesn't involve to much boilerplate code.
+
 ## What is a profile?
 OSINT'er is a project aiming at building an generic webscraping engine, for
 collecting and curating information and articles from a whole range of news
