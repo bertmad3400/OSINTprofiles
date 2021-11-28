@@ -9,7 +9,7 @@
 	"scrapingTargets": {
 	  "containerList": "div.main-col",
 	  "linkContainers": "div.river-well.article",
-	  "links": "a[href]"
+	  "links": "h3 > a[href]"
 	}
   },
   "scraping": {
