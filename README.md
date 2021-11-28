@@ -1,6 +1,6 @@
 # OSINTer profiles
 
-![OSINTer](https://raw.githubusercontent.com/bertmad3400/OSINTer/master/logo.png)
+[![OSINTer](https://raw.githubusercontent.com/bertmad3400/OSINTer/master/logo.png)](https://osinter.dk)
 
 ## Welcome to OSINTer This repo is a part of a larger project called
 ![OSINTer](https://github.com/bertmad3400/OSINTer). For more information on the
