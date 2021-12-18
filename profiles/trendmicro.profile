@@ -7,17 +7,17 @@
     "retrivalMethod": "scraping",
     "newsPath": "https://blog.trendmicro.com/category/security/",
 	"scrapingTargets": {
-      "containerList": "div#pageContent",
-      "linkContainers": "div.post.status-publish.category-security:not(.category-consumer)",
-      "links": "a[href]"
+      "containerList": "div.grid-container",
+      "linkContainers": "article.grid-item[data-pageid]",
+      "links": "a.heading[href]"
     }
 
   },
   "scraping": {
     "type": "no-action",
     "content": {
-      "container": "div.post-text",
-      "remove": "div.post-text > img:first-child;div.addthis_toolbox"
+      "container": "main.main--content",
+      "remove": "section.tag--list"
     }
   }
 }
