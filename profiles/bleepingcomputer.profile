@@ -8,7 +8,7 @@
     "newsPath": "https://www.bleepingcomputer.com/feed/"
   },
   "scraping": {
-    "type": "no-action",
+    "type": "JS:scrollDown",
     "content": {
       "container": "div.articleBody",
       "remove": "cnx.cnx-main-container;.cnx-in-desktop;.cnx-ps;.cnx-main-container-flex;div.cz-related-article-wrapp"
