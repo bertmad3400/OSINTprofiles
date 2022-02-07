@@ -17,7 +17,7 @@
     "type": "no-action",
     "content": {
       "container": "main.main--content",
-      "remove": "section.tag--list"
+      "remove": "section.tag--list;div.jwPlayer"
     }
   }
 }

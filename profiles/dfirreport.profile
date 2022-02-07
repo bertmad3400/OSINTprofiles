@@ -13,7 +13,7 @@
     }
   },
   "scraping": {
-    "type": "no-action",
+    "type": "JS:removeTitles",
     "content": {
       "container": "div.entry-content",
       "remove": "div.sharedaddy;div.jp-relatedposts;noscript"

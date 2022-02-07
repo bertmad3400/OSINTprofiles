@@ -11,7 +11,7 @@
     "type": "JS:scrollDown",
     "content": {
       "container": "div.articleBody",
-      "remove": "cnx.cnx-main-container;.cnx-in-desktop;.cnx-ps;.cnx-main-container-flex;div.cz-related-article-wrapp"
+      "remove": "cnx.cnx-main-container;.cnx-in-desktop;.cnx-ps;.cnx-main-container-flex;div.cz-related-article-wrapp;p:first-child > img"
     }
   }
 }

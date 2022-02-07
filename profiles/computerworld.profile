@@ -16,7 +16,7 @@
     "type": "no-action",
     "content": {
 	  "container": "div#drr-container",
-      "remove": "div.end-note;aside.native-promo;div.brVideoContainer;div.fakesidebar;aside.fakesidebar;aside.nativo-promo;div.tease-promo;script;figcaption;small.credit"
+      "remove": "div.end-note;aside.native-promo;div.brVideoContainer;div.fakesidebar;aside.fakesidebar;aside.nativo-promo;div.tease-promo;script;figcaption;small.credit;.ad;div.wrapAd;div.lb-main"
     }
   }
 }

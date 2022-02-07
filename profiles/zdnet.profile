@@ -16,7 +16,7 @@
     "type": "no-action",
     "content": {
       "container": "div.storyBody",
-      "remove": "div.relatedContent;section.leadgenads;div.shortcode"
+      "remove": "div.relatedContent;section.leadgenads;div.shortcode;figure.image:first-child"
     }
   }
 }
