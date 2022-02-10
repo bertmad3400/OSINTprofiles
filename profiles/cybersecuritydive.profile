@@ -14,6 +14,13 @@
   },
   "scraping": {
     "type": "no-scraping",
+	"meta" : {
+		"author" : "meta[name='sailthru.author']",
+		"publish_date" : "meta[name=date]",
+		"title" : "meta[property='og:title']",
+		"description" : "meta[property='og:description']",
+		"image_url" : "meta[property='og:image']"
+	},
     "content": {
       "container": "div.article-body",
       "remove": "div.hybrid-ad-wrapper"

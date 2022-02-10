@@ -9,6 +9,13 @@
   },
   "scraping": {
     "type": "no-action",
+	"meta" : {
+		"author" : "meta[itemprop=name]",
+		"publish_date" : "meta[property='article:published_time']",
+		"title" : "meta[property='og:title']",
+		"description" : "meta[property='og:description']",
+		"image_url" : "meta[property='og:image']"
+	},
     "content": {
       "container": "div.td-post-content",
       "remove": "div.td-post-featured-image;p.has-background:last-child"

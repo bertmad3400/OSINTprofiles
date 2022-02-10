@@ -14,6 +14,13 @@
   },
   "scraping": {
     "type": "JS:removeTitles;JS:moveImagesOutsideTable",
+	"meta" : {
+		"author" : "div[itemprop=author] > meta",
+		"publish_date" : "meta[itemprop=datePublished]",
+		"title" : "meta[property='og:title']",
+		"description" : "meta[property='og:description']",
+		"image_url" : "meta[property='og:image']"
+	},
     "content": {
       "container": "div#articlebody",
       "remove": ".separator:first-child;div.ad_two;div.note-b"

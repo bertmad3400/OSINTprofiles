@@ -14,6 +14,13 @@
   },
   "scraping": {
     "type": "JS:removeTitles",
+	"meta" : {
+		"author" : "meta[property='og:site_name']",
+		"publish_date" : "meta[property='article:published_time']",
+		"title" : "meta[property='og:title']",
+		"description" : "meta[property='og:description']",
+		"image_url" : "meta[property='og:image']"
+	},
     "content": {
       "container": "div.entry-content",
       "remove": "div.sharedaddy;div.jp-relatedposts;noscript"

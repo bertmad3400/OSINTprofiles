@@ -14,6 +14,13 @@
   },
   "scraping": {
     "type": "no-action",
+	"meta" : {
+		"author" : "meta[name='author']",
+		"publish_date" : "",
+		"title" : "meta[property='og:title']",
+		"description" : "meta[property='og:description']",
+		"image_url" : "meta[property='og:image']"
+	},
     "content": {
       "container": "div.storyBody",
       "remove": "div.relatedContent;section.leadgenads;div.shortcode;figure.image:first-child"

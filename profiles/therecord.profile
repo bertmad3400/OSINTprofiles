@@ -14,6 +14,13 @@
   },
   "scraping": {
     "type": "JS:fixTheRecordLinks",
+	"meta" : {
+		"author" : "",
+		"publish_date" : "meta[property='article:published_time']",
+		"title" : "meta[property='og:title']",
+		"description" : "meta[property='og:description']",
+		"image_url" : "meta[property='og:image']"
+	},
     "content": {
       "container": "div.col-right",
       "remove": "div.share-icons-bottom;div.tags;div.bottom-author;h1.single-page-title"
