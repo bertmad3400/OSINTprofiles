@@ -9,6 +9,13 @@
   },
   "scraping": {
     "type": "",
+	"meta" : {
+		"author" : "",
+		"publish_date" : "",
+		"title" : "meta[property='og:title']",
+		"description" : "meta[property='og:description']",
+		"image_url" : "meta[property='og:image']"
+	},
     "content": {
       "container": "",
       "remove": ""
