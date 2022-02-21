@@ -3,7 +3,7 @@
     "name": "SecurityWeek",
     "profileName": "securityweek",
     "address": "https://www.securityweek.com/",
-    "imageURL": "https://www.securityweek.com/sites/default/files/securityweek_logo.jpg",
+    "imageURL": "https://mms.businesswire.com/media/20210112005589/en/851776/23/SecurityWeek-Logo.jpg",
     "retrivalMethod": "scraping",
     "newsPath": "https://feeds.feedburner.com/securityweek",
     "scrapingTargets": {

@@ -3,7 +3,7 @@
     "name": "The Record",
     "profileName": "therecord",
     "address": "https://therecord.media/",
-    "imageURL": "https://www.therecord.com/assets/svg/logo-therecord.svg",
+    "imageURL": "https://perimeterinstitute.ca/sites/default/files/styles/news_card/public/2020-11/The_Record_Logo_card.jpg?itok=RI0RajAg",
     "retrivalMethod": "scraping",
     "newsPath": "https://therecord.media/all-news/",
     "scrapingTargets": {

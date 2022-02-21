@@ -3,7 +3,7 @@
     "name": "Ars Technica",
     "profileName": "arstechnica",
     "address": "https://arstechnica.com/",
-    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ars_Technica_logo_%282016%29.svg/1200px-Ars_Technica_logo_%282016%29.svg.png",
+    "imageURL": "https://logos-download.com/wp-content/uploads/2021/02/Ars_Technica_Logo.png",
     "retrivalMethod": "scraping",
     "newsPath": "https://arstechnica.com/information-technology/",
     "scrapingTargets": {
