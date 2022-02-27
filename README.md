@@ -124,12 +124,7 @@ attribute can't be left blank (so if in doubt, simply use the selector
 #### The scraping section
 The prior section was mostly about where to find the articles to scrape, but in
 contrast to that, this section is about where on a given article page to find
-the relevant details. A concept you will encounter a lot in this section is the
-mentions of containers. This is used to describe HTML elements surrounding the
-element that is of interrest to you and are based on the idea that if you fx. are
-looking for a link, if you then locate a container (could be a div, a span or
-something else) containing that link, and no other links, it's easy to extract
-the link.
+the relevant details.
 
 - **type**: This is an attribute that currently has two options; 1. specifying
   "no-action", which will have no effect on the scraping and 2. specifying JS
@@ -141,6 +136,13 @@ the link.
   Here, the injectionFileName is the name of the js file in the
   OSINTbackend/OSINTJSInjections directory containing the JS injection,
   excluding the .js extension.
+- **meta**: The section describing where to find meta information about the
+  article:
+    - **author**: The name of the author
+	- **publish_date**: The date the article was published
+	- **title**: The title of the article
+	- **description**: A short description of the article
+	- **image_url**: An url for an image related to the article
 - **content**: The section describing how to scrape the main text body:
 	- **container**: This is a CSS selector for the container containing the
 	  main text of the article.
