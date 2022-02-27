@@ -15,6 +15,25 @@ a generic scraping engine for these sites, and thereby managing the wast
 differences in modern websites in a managable way that doesn't involve to much
 boilerplate code.
 
+## What are OSINT JS injections?
+Before getting to the profiles themselves, we will have to quickly go over the
+OSINT JS injections. Where profiles are used to specify where to find certain
+informations on newssites, JS injections are Javascript scripts that will run on
+the site after it has been loaded in Selenium, but before the source code is
+scraped. This allows for possibilities like automatically scrolling down to load
+dynamically loaded content, or maybe to push a "Read More" button to reveal the
+whole article for scraping.
+
+## How can you create a JS injection?
+JS injections are simply vanilla Javascript, and as such you can simply create a
+script, give it a ".js" file extension and put it in the OSINTJSInjection folder
+to be able to use it when scraping, but there is hovewer a single caveat. Your
+script should start with setting "document.osinterReady" to false, and end with
+changing it to true. This way OSINTer will know to wait for the completion of
+your script, though keep in mind that this also means you shouldn't create
+scripts that take more than at max a few minuttes to run, to prevent scraping
+taking too long.
+
 ## What is a profile?
 OSINT'er is a project aiming at building an generic webscraping engine, for
 collecting and curating information and articles from a whole range of news
@@ -114,11 +133,8 @@ the link.
 
 - **type**: This is an attribute that currently has two options; 1. specifying
   "no-action", which will have no effect on the scraping and 2. specifying JS
-  injections for the scraping proccess (for an explanation of what JS injections
-  are, check phase 2 in the Technical details section of the [OSINTer
-  README](https://github.com/bertmad3400/OSINTer/blob/testing/README.md)) To
-  specify JS injections, specify a semicolon sepearated list of JS injections in
-  this format:
+  injections for the scraping proccess. To specify JS injections, specify a
+  semicolon sepearated list of JS injections in this format:
 
   ```JS:[injectionFileName];JS:[injectionFileName];...```
 
