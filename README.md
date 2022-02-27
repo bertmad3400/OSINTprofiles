@@ -35,11 +35,11 @@ scripts that take more than at max a few minuttes to run, to prevent scraping
 taking too long.
 
 ## What is a profile?
-OSINT'er is a project aiming at building an generic webscraping engine, for
+OSINTer is a project aiming at building an generic webscraping engine, for
 collecting and curating information and articles from a whole range of news
 sites by using a couple of rules on how and where to find the relevant
 information on these news sites. These rules are internally refered to as
-profiles and they are what allows OSINT'er to collect large amounts of
+profiles and they are what allows OSINTer to collect large amounts of
 information from a wide range of sites with very little knowledge about the
 structure of the sites.
 
@@ -84,7 +84,7 @@ the details described in the next section.
 Now, the first few details will be descriped in the template and are simple
 things like the url to the news site or the name of it, but as you continue
 filling it out, a lot of details will be different kinds of HTML tags and their
-class, which allows OSINT'er to extract the right details from the articles by
+class, which allows OSINTer to extract the right details from the articles by
 identifying and extracting those HTML elements described in the profile. To find
 those yourself hovewer, it is recommended to simply open up an article from the
 news site in question, and then use the "inspect" tool build into most modern
