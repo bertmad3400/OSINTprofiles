@@ -15,9 +15,16 @@
   },
   "scraping": {
     "type": "no-action",
+	"meta" : {
+		"author" : "p.article-authors__list-items__name",
+		"publish_date" : "meta[property='article:published_time']",
+		"title" : "meta[property='og:title']",
+		"description" : "p.article-details__description",
+		"image_url" : "meta[property='og:image']"
+	},
     "content": {
       "container": "main.main--content",
-      "remove": "section.tag--list"
+      "remove": "section.tag--list;div.jwPlayer"
     }
   }
 }

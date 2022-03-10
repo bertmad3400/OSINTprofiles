@@ -9,9 +9,16 @@
   },
   "scraping": {
     "type": "no-action",
+	"meta" : {
+		"author" : "",
+		"publish_date" : "",
+		"title" : "meta[property='og:title']",
+		"description" : "meta[property='og:description']",
+		"image_url" : "meta[property='og:image']"
+	},
     "content": {
       "container": ".c-article__content",
-      "remove": "img.wp-image-141989;footer;[class^='wp-caption']"
+      "remove": "img.wp-image-141989;footer"
     }
   }
 }

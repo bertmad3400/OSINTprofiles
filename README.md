@@ -15,12 +15,31 @@ a generic scraping engine for these sites, and thereby managing the wast
 differences in modern websites in a managable way that doesn't involve to much
 boilerplate code.
 
+## What are OSINT JS injections?
+Before getting to the profiles themselves, we will have to quickly go over the
+OSINT JS injections. Where profiles are used to specify where to find certain
+informations on newssites, JS injections are Javascript scripts that will run on
+the site after it has been loaded in Selenium, but before the source code is
+scraped. This allows for possibilities like automatically scrolling down to load
+dynamically loaded content, or maybe to push a "Read More" button to reveal the
+whole article for scraping.
+
+## How can you create a JS injection?
+JS injections are simply vanilla Javascript, and as such you can simply create a
+script, give it a ".js" file extension and put it in the OSINTJSInjection folder
+to be able to use it when scraping, but there is hovewer a single caveat. Your
+script should start with setting "document.osinterReady" to false, and end with
+changing it to true. This way OSINTer will know to wait for the completion of
+your script, though keep in mind that this also means you shouldn't create
+scripts that take more than at max a few minuttes to run, to prevent scraping
+taking too long.
+
 ## What is a profile?
-OSINT'er is a project aiming at building an generic webscraping engine, for
+OSINTer is a project aiming at building an generic webscraping engine, for
 collecting and curating information and articles from a whole range of news
 sites by using a couple of rules on how and where to find the relevant
 information on these news sites. These rules are internally refered to as
-profiles and they are what allows OSINT'er to collect large amounts of
+profiles and they are what allows OSINTer to collect large amounts of
 information from a wide range of sites with very little knowledge about the
 structure of the sites.
 
@@ -65,7 +84,7 @@ the details described in the next section.
 Now, the first few details will be descriped in the template and are simple
 things like the url to the news site or the name of it, but as you continue
 filling it out, a lot of details will be different kinds of HTML tags and their
-class, which allows OSINT'er to extract the right details from the articles by
+class, which allows OSINTer to extract the right details from the articles by
 identifying and extracting those HTML elements described in the profile. To find
 those yourself hovewer, it is recommended to simply open up an article from the
 news site in question, and then use the "inspect" tool build into most modern
@@ -105,26 +124,25 @@ attribute can't be left blank (so if in doubt, simply use the selector
 #### The scraping section
 The prior section was mostly about where to find the articles to scrape, but in
 contrast to that, this section is about where on a given article page to find
-the relevant details. A concept you will encounter a lot in this section is the
-mentions of containers. This is used to describe HTML elements surrounding the
-element that is of interrest to you and are based on the idea that if you fx. are
-looking for a link, if you then locate a container (could be a div, a span or
-something else) containing that link, and no other links, it's easy to extract
-the link.
+the relevant details.
 
 - **type**: This is an attribute that currently has two options; 1. specifying
   "no-action", which will have no effect on the scraping and 2. specifying JS
-  injections for the scraping proccess (for an explanation of what JS injections
-  are, check phase 2 in the Technical details section of the [OSINTer
-  README](https://github.com/bertmad3400/OSINTer/blob/testing/README.md)) To
-  specify JS injections, specify a semicolon sepearated list of JS injections in
-  this format:
+  injections for the scraping proccess. To specify JS injections, specify a
+  semicolon sepearated list of JS injections in this format:
 
   ```JS:[injectionFileName];JS:[injectionFileName];...```
 
   Here, the injectionFileName is the name of the js file in the
   OSINTbackend/OSINTJSInjections directory containing the JS injection,
   excluding the .js extension.
+- **meta**: The section describing where to find meta information about the
+  article:
+    - **author**: The name of the author
+	- **publish_date**: The date the article was published
+	- **title**: The title of the article
+	- **description**: A short description of the article
+	- **image_url**: An url for an image related to the article
 - **content**: The section describing how to scrape the main text body:
 	- **container**: This is a CSS selector for the container containing the
 	  main text of the article.
