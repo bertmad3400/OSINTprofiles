@@ -9,7 +9,7 @@
     "scrapingTargets": {
       "containerList": "div.infinite-scroll-component",
       "linkContainers": "div.topic-content-article",
-      "links": "a.article-title[href]"
+      "links": "a.article-edge-wrap--link[href]"
     }
   },
   "scraping": {
