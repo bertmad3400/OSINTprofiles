@@ -23,7 +23,7 @@
 	},
     "content": {
       "container": "div.storyBody",
-      "remove": "div.relatedContent;section.leadgenads;div.shortcode;figure.image:first-child"
+      "remove": "div.zdnetVideoPlayer;div.relatedContent;section.leadgenads;figure.image:first-child;div.share-bar-wrapper;script;img[src='']"
     }
   }
 }

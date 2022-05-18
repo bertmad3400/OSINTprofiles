@@ -23,7 +23,7 @@
 	},
     "content": {
       "container": "div.article-body",
-      "remove": "div.hybrid-ad-wrapper"
+      "remove": "div.hybrid-ad-wrapper;[class^=text-to-speech]"
     }
   }
 }

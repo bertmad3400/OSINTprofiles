@@ -13,7 +13,7 @@
     }
   },
   "scraping": {
-    "type": "no-action",
+    "type": "JS:fixRelativeLinks",
 	"meta" : {
 		"author" : "div > div.submitted > div > a",
 		"publish_date" : "",

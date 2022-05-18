@@ -18,7 +18,7 @@
 	},
     "content": {
       "container": ".c-article__content",
-      "remove": "img.wp-image-141989;footer"
+      "remove": "img.wp-image-141989;footer;img[alt='Infosec Insiders Newsletter']"
     }
   }
 }

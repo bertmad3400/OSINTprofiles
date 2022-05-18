@@ -23,7 +23,7 @@
 	},
     "content": {
       "container": "div.content",
-      "remove": "h2#more-from-cybernews ~ p;h2#more-from-cybernews"
+      "remove": "h2#more-from-cybernews ~ p;h2#more-from-cybernews;div.content > p:empty;div.content > p:first-of-type > strong > em"
     }
   }
 }

@@ -23,7 +23,7 @@
 	},
     "content": {
       "container": "main#main > article",
-      "remove": "div.xrail;header.article-header;figure.intro-image;aside;div#article-footer-wrap;div#social-footer;section.article-author;nav.page-numbers;div.story-sidebar;a.enlarge-link;section.promoted-comments"
+      "remove": "div.xrail;header.article-header;figure.intro-image;aside;div#article-footer-wrap;div#social-footer;section.article-author;nav.page-numbers;div.story-sidebar;a.enlarge-link;section.promoted-comments;div#mc_embed_signup;div.superscroll-pager"
     }
   }
 }

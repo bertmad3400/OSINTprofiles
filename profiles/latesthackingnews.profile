@@ -23,7 +23,7 @@
 	},
     "content": {
 	  "container": "div#penci-post-entry-inner",
-      "remove": "div.post-tags"
+      "remove": "div.post-tags;aside"
     }
   }
 }
