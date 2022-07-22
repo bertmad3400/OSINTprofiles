@@ -5,10 +5,10 @@
     "address": "https://www.securityweek.com/",
     "imageURL": "https://mms.businesswire.com/media/20210112005589/en/851776/23/SecurityWeek-Logo.jpg",
     "retrivalMethod": "scraping",
-    "newsPath": "https://feeds.feedburner.com/securityweek",
+    "newsPath": "https://www.securityweek.com/",
     "scrapingTargets": {
-	  "containerList": "div#bodyblock > ul",
-      "linkContainers": "li.regularitem > h4.itemtitle",
+	  "containerList": "div.pane-views-lastest-security-block-1",
+      "linkContainers": "span.field-content",
 	  "links": "a[href]"
     }
   },
